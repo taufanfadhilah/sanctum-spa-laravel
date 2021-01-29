@@ -22,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 Route::post('logout', [UserController::class, 'logout'])->middleware('auth:sanctum');
+
+// with token
+Route::post('loginToken', [UserController::class, 'loginToken']);
+Route::post('logoutToken', [UserController::class, 'logoutToken'])->middleware('auth:sanctum');
